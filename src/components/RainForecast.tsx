@@ -41,18 +41,18 @@ const RainForecast = () => {
   return (
     <div>
       <h2>Rain Forecast (Next 16 Days)</h2>
-      <table border="1">
+      <table style={{ border: "1px solid white"}}>
         <thead>
           <tr>
             <th>Date</th>
-            <th>Precipitation Probability (%)</th>
+            <th style={{paddingLeft:"10px"}}>Precipitation Probability (%)</th>
           </tr>
         </thead>
         <tbody>
           {forecast?.daily.time.map((date, index) => (
             <tr key={date}>
               <td>{date}</td>
-              <td>{forecast.daily.precipitation_probability_max[index]}%</td>
+              <td style={{paddingLeft:"10px"}}>{forecast.daily.precipitation_probability_max[index]}%</td>
             </tr>
           ))}
         </tbody>
